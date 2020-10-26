@@ -3,6 +3,7 @@ package main;
 import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Blockchain {
 
@@ -14,6 +15,8 @@ public class Blockchain {
     }
 
     private Block generateGenesis() {
+
+        Scanner sc = new Scanner(System.in);
         Block genesis = new Block("0x200", new java.util.Date(), "<Transations>", null);
         genesis.setPreviousHash(null);
         genesis.computeHash();
